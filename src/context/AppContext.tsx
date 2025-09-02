@@ -6,15 +6,15 @@ export interface Course {
   name: string;
   description: string;
   duration: number; // in weeks
-  // price: number;
+  price: number;
   image: string;
   features: string[];
-  // level: 'Beginner' | 'Intermediate' | 'Advanced';
+  level: 'Beginner' | 'Intermediate' | 'Advanced';
   instructor: string;
   category: string;
   startDate: string;
-  // maxStudents: number;
-  // enrolledStudents: number;
+  maxStudents: number;
+  enrolledStudents: number;
 }
 
 export interface Enrollment {
@@ -24,9 +24,9 @@ export interface Enrollment {
   studentName: string;
   studentEmail: string;
   studentPhone: string;
-  // enrollmentDate: string;
+  enrollmentDate: string;
   status: 'enrolled' | 'completed' | 'dropped' | 'pending';
-  // price: number;
+  price: number;
   progress: number; // percentage
   notes?: string;
   experience?: string;
@@ -88,14 +88,14 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         name: course.name,
         description: course.description,
         duration: course.duration,
-        // price: course.price,
+        price: course.price,
         image: course.image,
         features: course.features,
-        // level: course.level as 'Beginner' | 'Intermediate' | 'Advanced',
+        level: course.level as 'Beginner' | 'Intermediate' | 'Advanced',
         instructor: course.instructor,
         category: course.category,
         startDate: course.start_date,
-        // maxStudents: course.max_students,
+        maxStudents: course.max_students,
         enrolledStudents: course.enrolled_students
       }));
 
@@ -183,60 +183,60 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         name: 'Full Stack Web Development',
         description: 'Complete web development bootcamp covering HTML, CSS, JavaScript, React, Node.js, and databases.',
         duration: 12,
-        // price: 20000,
+        price: 20000,
         image: 'https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg',
         features: ['HTML5 & CSS3', 'JavaScript ES6+', 'React & Redux', 'Node.js & Express', 'SQL', 'Project Portfolio'],
-        // level: 'Beginner',
+        level: 'Beginner',
         instructor: 'Srikanth',
         category: 'Web Development',
         startDate: '2025-10-15',
-        // maxStudents: 25,
-        // enrolledStudents: 18
+        maxStudents: 25,
+        enrolledStudents: 18
       },
       {
         id: '2',
         name: 'Data Engineer',
         description: 'Comprehensive Python course from basics to advanced topics including data engineering and automation.',
         duration: 12,
-        // price: 30000,
+        price: 30000,
         image: 'https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg',
         features: ['Python Fundamentals', 'Data Structures', 'Web Scraping', 'Automation Scripts', 'SQL', 'Big Data Tools', 'Real Projects', 'Databricks', 'Azure Data Factory'],
-        // level: 'Beginner',
+        level: 'Beginner',
         instructor: 'Venkaiah Naidu',
         category: 'Programming',
         startDate: '2025-09-01',
-        // maxStudents: 10,
-        // enrolledStudents: 7
+        maxStudents: 10,
+        enrolledStudents: 7
       },
       {
         id: '3',
         name: 'Cloud Computing & DevOps',
         description: 'Learn cloud platforms, containerization, CI/CD, and modern DevOps practices for scalable applications.',
         duration: 12,
-        // price: 25000,
+        price: 25000,
         image: 'https://images.pexels.com/photos/1181298/pexels-photo-1181298.jpeg',
         features: ['AWS/Azure/GCP', 'Docker & Kubernetes', 'CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring & Logging', 'Security Best Practices'],
-        // level: 'Advanced',
+        level: 'Advanced',
         instructor: 'VasuDeva',
         category: 'Cloud & DevOps',
         startDate: '2025-09-15',
-        // maxStudents: 10,
-        // enrolledStudents: 3
+        maxStudents: 10,
+        enrolledStudents: 3
       },
       {
         id: '4',
         name: 'Medical Coding',
         description: 'Ensure accurate healthcare billing, insurance claims, and compliance by translating medical diagnoses and procedures into standardized universal codes.',
         duration: 12,
-        // price: 30000,
+        price: 30000,
         image: 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg',
         features: ['3M CodeFinder / 3M 360 Encompass', 'Optum EncoderPro.com', 'AHIMA CLiNQ', 'Medicode / SuperCoder (AAPC)', 'Find-A-Code'],
-        // level: 'Intermediate',
+        level: 'Intermediate',
         instructor: 'Dr. Ravi Prathap',
         category: 'Medical Coding',
         startDate: '2025-09-15',
-        // maxStudents: 15,
-        // enrolledStudents: 12
+        maxStudents: 15,
+        enrolledStudents: 12
       }
     ];
     
