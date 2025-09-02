@@ -6,15 +6,15 @@ export interface Course {
   name: string;
   description: string;
   duration: number; // in weeks
-  price: number;
+  // price: number;
   image: string;
   features: string[];
-  level: 'Beginner' | 'Intermediate' | 'Advanced';
+  // level: 'Beginner' | 'Intermediate' | 'Advanced';
   instructor: string;
   category: string;
   startDate: string;
-  maxStudents: number;
-  enrolledStudents: number;
+  // maxStudents: number;
+  // enrolledStudents: number;
 }
 
 export interface Enrollment {
@@ -24,9 +24,9 @@ export interface Enrollment {
   studentName: string;
   studentEmail: string;
   studentPhone: string;
-  enrollmentDate: string;
+  // enrollmentDate: string;
   status: 'enrolled' | 'completed' | 'dropped' | 'pending';
-  price: number;
+  // price: number;
   progress: number; // percentage
   notes?: string;
   experience?: string;
@@ -88,14 +88,14 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         name: course.name,
         description: course.description,
         duration: course.duration,
-        price: course.price,
+        // price: course.price,
         image: course.image,
         features: course.features,
-        level: course.level as 'Beginner' | 'Intermediate' | 'Advanced',
+        // level: course.level as 'Beginner' | 'Intermediate' | 'Advanced',
         instructor: course.instructor,
         category: course.category,
         startDate: course.start_date,
-        maxStudents: course.max_students,
+        // maxStudents: course.max_students,
         enrolledStudents: course.enrolled_students
       }));
 
